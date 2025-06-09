@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Vowel Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Count Vowels in a String</h2>
+                <div class="card shadow p-4">
+                    <form th:action="@{/vowel}" th:object="${vowelCounter}" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Enter a string:</label>
+                            <input type="text" th:field="*{text}" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Count Vowels</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

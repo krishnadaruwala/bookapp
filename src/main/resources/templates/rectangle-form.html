@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Rectangle Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="mb-4 text-center">Rectangle Area Calculator</h2>
+                <div class="card shadow p-4">
+                    <form method="post" th:action="@{/rectangle}" th:object="${rectangle}">
+                        <div class="mb-3">
+                            <label class="form-label">Length:</label>
+                            <input type="number" step="0.01" th:field="*{length}" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Breadth:</label>
+                            <input type="number" step="0.01" th:field="*{breadth}" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Calculate Area</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+

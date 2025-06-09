@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Shape Area Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow p-4 text-center">
+                <h2 class="mb-4">Shape Area Result</h2>
+
+                <p class="fs-5">
+                    <strong>Shape:</strong> <span th:text="${shape}"></span>
+                </p>
+
+                <p class="fs-4 text-success fw-bold">
+                    Area = <span th:text="${area}"></span>
+                </p>
+
+                <a href="/shape" class="btn btn-secondary mt-4">Calculate Again</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

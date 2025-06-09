@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Vowel Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow p-4">
+            <h2 class="text-center mb-4">Vowel Count Result</h2>
+            <p class="fs-5 text-center">
+                The string "<strong th:text="${text}"></strong>" contains 
+                <strong th:text="${count}"></strong> vowel(s).
+            </p>
+            <div class="text-center mt-4">
+                <a href="/vowel" class="btn btn-secondary">Try Another</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
